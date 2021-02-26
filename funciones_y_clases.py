@@ -1,12 +1,16 @@
 global1 = 34
 
-def cambiar_global():
+def cambiar_global(global1):
     '''Cambiar una variable global
 
     Esta función debe asignarle a la variable global `global1` el valor que se
     le pasa como único argumento posicional.
     '''
     pass
+    global1 = input('Que valor quiere asignarle a la variable global1?')
+    return global1
+global1 = cambiar_global(global1)
+print('El valor asignado a la variable global1 es:' + ' '+ global1)
 
 
 def anio_bisiesto():

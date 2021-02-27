@@ -1,19 +1,20 @@
 global1 = 34
 
-def cambiar_global(global1):
+def cambiar_global(var1):
     '''Cambiar una variable global
 
     Esta función debe asignarle a la variable global `global1` el valor que se
     le pasa como único argumento posicional.
     '''
-    pass
-    global1 = input('Que valor quiere asignarle a la variable global1?')
+    global1 = var1
+    print(var1)
     return global1
-global1 = cambiar_global(global1)
-print('El valor asignado a la variable global1 es:' + ' '+ global1)
+    pass   
+cambiar_global(45)
+print(global1)
 
 
-def anio_bisiesto():
+def anio_bisiesto(anio):
     '''Responder si el entero pasado como argumento es un año bisiesto
     
     Para determinar si un año es bisiesto, se deben tener en cuenta las 
@@ -22,10 +23,17 @@ def anio_bisiesto():
     - Si el año es divisible por 4 es bisiesto, a menos que:
         - Si el año es divisible por 100 no es bisiesto a menos que:
             - Si el año es divisible por 400 es bisiesto.
-
     Retorna True o False
-    '''
+    ''' 
+    if (anio % 4 == 0)  or (anio % 100 == 0 and anio % 400 == 0):
+        return True
+    else:  
+        return False
     pass
+
+anio_bisiesto(2021)
+
+
 
 def contar_valles():
     r'''Contar el número de valles
@@ -63,7 +71,7 @@ def saltando_rocas():
     '''
     pass
 
-def pares_medias():
+def pares_medias(*args):
     '''Contar pares de medias
 
     Esta función debe recibir como argumento una lista de enteros. Cada elemento
@@ -73,7 +81,16 @@ def pares_medias():
     uno de los colores que se encuentren en la lista, y los valores son la 
     cantidad de pares que se han encontrado para cada color.
     '''
-    pass
+    
+    lista1 = []
+    for i in args:
+       lista1.append(i)
+    pares = {i:int(lista1.count(i)/2) for i in lista1}
+    print(pares)
+
+pares_medias(1,3,3,4,5,6,4,5,1,2,2,2,3,5,4,3,2,1,1,3,3)
+
+
 
 # Crear una clase llamada `ListaComa` que reciba en su constructor un iterable
 # con el valor inicial para una lista que se guardará en un atributo llamado 

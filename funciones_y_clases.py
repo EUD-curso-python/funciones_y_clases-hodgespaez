@@ -51,15 +51,20 @@ def contar_valles(*args):
     representados en la lista, que para el ejemplo que se acaba de mostrar es
     de 3 valles.
     '''
-    pass
+    #pass
 
-    l = 0
-    for i in args:
-         if i == 0: continue
-         if i == 1: l += 1
-         else: 0
-    print(l)
-args = [-1,1,0,1,1,-1,0,0,1,-1,1,1,-1,-1] 
+    con = 0
+    for i in range(0,args):
+      for e in range(1,args):
+         if i == 1 and e== -1: 
+           con += 1
+         else: 
+           con
+    
+    return con
+
+
+args = [1,-1,1,1,-1,0,0,1,-1,1,1,-1,-1] 
     
 
 def saltando_rocas():
@@ -90,12 +95,16 @@ def pares_medias(*args):
     '''
     pares = {}
     lista1 = []
+    
     for i in args:
-       lista1.append(i)
-       pares [i] = int(lista1.count(i)/2)
-    print(pares)
-
-pares_medias(1,1,2,2,3,3,4,4,5,5)
+        lista1.append(i)
+        pares [i] = int(lista1.count(i)/2)
+        if pares [i] == 0:
+          del pares[i]
+    
+    #print(pares)
+    return pares
+pares_medias(1,1,2,2,3,3,4,4,5,5,2,1,3,6,3)
 
 
 

@@ -127,7 +127,7 @@ class ListaComa:
 nombre = ListaComa()
 print(nombre)
   
-
+Hola Hola 
 # Crear una clase llamada `Persona` que reciba en su constructor como 1er 
 # argumento un iterable con el valor inicial para una lista que se guardará en
 # un atributo llamado `nombres` y como 2do argumento un iterable con el valor 

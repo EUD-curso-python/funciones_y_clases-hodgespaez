@@ -120,9 +120,13 @@ class ListaComa:
   
   def __str__(self):
     for i in self.lista:
-      #Nuevo = ','.join([str(i) for el in self.lista])
-      print(i)
-    #return Nuevo
+      Nuevo = ','.join([str(i) for i in self.lista])
+      #print(Nuevo)
+      return Nuevo
+
+nombre = ListaComa()
+print(nombre)
+  
 
 # Crear una clase llamada `Persona` que reciba en su constructor como 1er 
 # argumento un iterable con el valor inicial para una lista que se guardará en

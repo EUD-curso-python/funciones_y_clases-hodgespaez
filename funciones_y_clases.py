@@ -114,8 +114,15 @@ pares_medias(1,1,2,2,3,3,4,4,5,5,2,1,3,6,3)
 # los elementos del atributo `lista` unidos a través de comas. Ejemplo:
 # si `lista` es [1,2,3,4], __str__ debe devolver '1,2,3,4'
 
-
-
+class ListaComa:
+  #def __init__(self, lista):
+  lista = [1,2,3,4]
+  
+  def __str__(self):
+    for i in self.lista:
+      #Nuevo = ','.join([str(i) for el in self.lista])
+      print(i)
+    #return Nuevo
 
 # Crear una clase llamada `Persona` que reciba en su constructor como 1er 
 # argumento un iterable con el valor inicial para una lista que se guardará en
@@ -132,8 +139,6 @@ pares_medias(1,1,2,2,3,3,4,4,5,5,2,1,3,6,3)
 # Ejemplo:
 # si `nombres` es ['Juan', 'David'] y `apellidos` es ['Torres', 'Salazar'],
 # el método `nombre completo` debe devolver  'Juan David Torres Salazar'
-
-
 
 
 

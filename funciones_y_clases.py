@@ -164,9 +164,6 @@ class Persona:
 juan = Persona(['Juan', 'David'],['Torres', 'Salazar'])
 juan.nombre_completo()
 
-
-
-
 # Crear una clase llamada `Persona1` que herede de la clase `Persona`, y que en su
 # constructor reciba además de los atributos del padre, una variable tipo 
 # `datetime` como 3er argumento para guardar en atributo `fecha_nacimiento`.
@@ -177,4 +174,8 @@ juan.nombre_completo()
 # Ejemplo:
 # si `fecha_nacimiento` es 1985-10-21 y la fecha actual es 2020-10-20, el método
 # `edad` debe devover 35.
+class Persona1(Persona):
+  def __init__(self,nombres, apellidos, fecha_nacimiento):
+    super().__init__(nombres, apellidos, fecha_nacimiento)
+    self.fecha_nacimiento = fecha_nacimiento
 

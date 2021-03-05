@@ -51,21 +51,7 @@ def contar_valles(*args):
     representados en la lista, que para el ejemplo que se acaba de mostrar es
     de 3 valles.
     '''
-    #pass
-
-    con = 0
-    for i in range(0,args):
-      for e in range(1,args):
-         if i == 1 and e== -1: 
-           con += 1
-         else: 
-           con
-    
-    return con
-
-
-args = [1,-1,1,1,-1,0,0,1,-1,1,1,-1,-1] 
-    
+    pass    
 
 def saltando_rocas():
     '''Mínimo número de saltos en las rocas
@@ -174,8 +160,21 @@ juan.nombre_completo()
 # Ejemplo:
 # si `fecha_nacimiento` es 1985-10-21 y la fecha actual es 2020-10-20, el método
 # `edad` debe devover 35.
-class Persona1(Persona):
-  def __init__(self,nombres, apellidos, fecha_nacimiento):
-    super().__init__(nombres, apellidos, fecha_nacimiento)
+import datetime
+class Persona1:#(Persona):
+  
+  def __init__(self,fecha_nacimiento): #nombres, apellidos,
+    #super().__init__(nombres, apellidos, fecha_nacimiento)
     self.fecha_nacimiento = fecha_nacimiento
+  
+ 
+  def edad(self):
+        hoy = datetime.datetime.now()
+        fechanacimiento=self.fnacimiento
+        edad = hoy.year - fechanacimiento.year - ((hoy.month, hoy.day) < (fechanacimiento.month, fechanacimiento.day))
+        #primero restamos los años y luego restamos la comparación entre mes y día actual y mes y día de nacimiento. 
+        print(edad)
 
+alumno1 = Persona1("11/04/1996")
+
+alumno1.edad()

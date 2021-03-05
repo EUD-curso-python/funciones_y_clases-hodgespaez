@@ -145,6 +145,19 @@ print(ValorInicial)
 # si `nombres` es ['Juan', 'David'] y `apellidos` es ['Torres', 'Salazar'],
 # el método `nombre completo` debe devolver  'Juan David Torres Salazar'
 
+class ListaComa:
+  def __init__(self, lista):
+  #lista = [1,2,3,4]
+   self.lista = lista
+  
+  def nombre_completo(self):
+    for i in self.lista:
+      Nuevo = ','.join([str(i) for i in self.lista])
+      #print(Nuevo)
+      return Nuevo
+
+ValorInicial = ListaComa([1,2,3,4])
+print(ValorInicial)
 
 
 # Crear una clase llamada `Persona1` que herede de la clase `Persona`, y que en su

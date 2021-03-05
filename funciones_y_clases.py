@@ -115,8 +115,9 @@ pares_medias(1,1,2,2,3,3,4,4,5,5,2,1,3,6,3)
 # si `lista` es [1,2,3,4], __str__ debe devolver '1,2,3,4'
 
 class ListaComa:
-  #def __init__(self, lista):
-  lista = [1,2,3,4]
+  def __init__(self, lista):
+  #lista = [1,2,3,4]
+   self.lista = lista
   
   def __str__(self):
     for i in self.lista:
@@ -124,10 +125,10 @@ class ListaComa:
       #print(Nuevo)
       return Nuevo
 
-nombre = ListaComa()
-print(nombre)
+ValorInicial = ListaComa([1,2,3,4])
+print(ValorInicial)
   
-Hola Hola 
+
 # Crear una clase llamada `Persona` que reciba en su constructor como 1er 
 # argumento un iterable con el valor inicial para una lista que se guardará en
 # un atributo llamado `nombres` y como 2do argumento un iterable con el valor 

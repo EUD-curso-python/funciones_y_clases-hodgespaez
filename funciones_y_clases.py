@@ -145,19 +145,26 @@ print(ValorInicial)
 # si `nombres` es ['Juan', 'David'] y `apellidos` es ['Torres', 'Salazar'],
 # el método `nombre completo` debe devolver  'Juan David Torres Salazar'
 
-class ListaComa:
-  def __init__(self, lista):
-  #lista = [1,2,3,4]
-   self.lista = lista
+class Persona:
+  def __init__(self, nombres, apellidos):
+     self.nombres = nombres
+     self.apellidos = apellidos
   
   def nombre_completo(self):
-    for i in self.lista:
-      Nuevo = ','.join([str(i) for i in self.lista])
-      #print(Nuevo)
-      return Nuevo
+    for el in self.nombres:
+      Nuevo1 = ' '.join([str(el).capitalize() for el in self.nombres])
+    #print(Nuevo1)
+    #return Nuevo1
+    for i in self.apellidos:
+      Nuevo2 = ' '.join([str(i).capitalize() for i in self.apellidos])
+    #print(Nuevo2) 
+    nombrestodo = (Nuevo1 + ' '+ Nuevo2) 
+    #print(nombrestodo)
+    return  nombrestodo
+juan = Persona(['Juan', 'David'],['Torres', 'Salazar'])
+juan.nombre_completo()
 
-ValorInicial = ListaComa([1,2,3,4])
-print(ValorInicial)
+
 
 
 # Crear una clase llamada `Persona1` que herede de la clase `Persona`, y que en su

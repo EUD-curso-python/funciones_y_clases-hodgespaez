@@ -88,11 +88,9 @@ def pares_medias(*args):
         if pares [i] == 0:
           del pares[i]
     
-    #print(pares)
+    print(pares)
     return pares
-pares_medias(1,1,2,2,3,3,4,4,5,5,2,1,3,6,3)
-
-
+pares_medias(1,1,2,2,3,3,4,4,5,5,2,1,3,6,3,1,11,1,1)
 
 # Crear una clase llamada `ListaComa` que reciba en su constructor un iterable
 # con el valor inicial para una lista que se guardará en un atributo llamado 
@@ -161,20 +159,22 @@ juan.nombre_completo()
 # si `fecha_nacimiento` es 1985-10-21 y la fecha actual es 2020-10-20, el método
 # `edad` debe devover 35.
 import datetime
-class Persona1:#(Persona):
+class Persona1(Persona):
   
-  def __init__(self,fecha_nacimiento): #nombres, apellidos,
-    #super().__init__(nombres, apellidos, fecha_nacimiento)
+  def __init__(self,nombres, apellidos, fecha_nacimiento):
     self.fecha_nacimiento = fecha_nacimiento
   
  
   def edad(self):
         hoy = datetime.datetime.now()
-        fechanacimiento=self.fnacimiento
-        edad = hoy.year - fechanacimiento.year - ((hoy.month, hoy.day) < (fechanacimiento.month, fechanacimiento.day))
-        #primero restamos los años y luego restamos la comparación entre mes y día actual y mes y día de nacimiento. 
-        print(edad)
+        #fechanacimiento = self.fecha_nacimiento
+        anios = hoy.year - self.fecha_nacimiento.year - ((hoy.month, hoy.day) < (self.fecha_nacimiento.month, self.fecha_nacimiento.day))
+        #anios = hoy - self.fecha_nacimiento
+        #anioss = int(anios)/365
+        #primero restamos los años y luego restamos la comparación entre mes y día actual y mes y día de nacimiento.
+        print(anios)
+        return anios
 
-alumno1 = Persona1("11/04/1996")
-
-alumno1.edad()
+persona = Persona1(['Juan', 'David'],['Torres', 'Salazar'],datetime.datetime(1985, 10, 21))
+persona.edad()
+#persona.fecha_nacimiento

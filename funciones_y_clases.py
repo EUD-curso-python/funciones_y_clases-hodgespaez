@@ -67,7 +67,7 @@ def saltando_rocas():
     El objetivo es devolver el número mínimo de saltos que debe realizar el 
     jugador para ganar la partida
     '''
-    pass
+    #pass
 
 def pares_medias(*args):
     '''Contar pares de medias

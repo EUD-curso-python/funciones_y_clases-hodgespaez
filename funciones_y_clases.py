@@ -167,14 +167,9 @@ class Persona1(Persona):
  
   def edad(self):
         hoy = datetime.datetime.now()
-        #fechanacimiento = self.fecha_nacimiento
         anios = hoy.year - self.fecha_nacimiento.year - ((hoy.month, hoy.day) < (self.fecha_nacimiento.month, self.fecha_nacimiento.day))
-        #anios = hoy - self.fecha_nacimiento
-        #anioss = int(anios)/365
-        #primero restamos los años y luego restamos la comparación entre mes y día actual y mes y día de nacimiento.
         print(anios)
         return anios
 
 persona = Persona1(['Juan', 'David'],['Torres', 'Salazar'],datetime.datetime(1985, 10, 21))
 persona.edad()
-#persona.fecha_nacimiento
